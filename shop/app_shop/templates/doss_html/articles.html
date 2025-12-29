@@ -1,0 +1,43 @@
+<!-- 
+1) Maintenant je dois faire la partie de chaque categorie des articles.
+2) A ce niveau je veux que l'image soit à cote du formulaire payement.
+3) Et quand tu choisis une image, elle doit etre enregistre dans la base, c'est just pour informe administrateur 
+    que cette image tu a choisi appartient a cette categorie. 
+4) RESTE A FAIRE: Le formulaire de payement. -->
+
+
+
+
+
+{% extends 'doss_html/bases.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="text-center my-4">
+    <h3 class="fw-bold">
+        <i class="bi bi-grid-fill text-primary me-2"></i>
+        Categories des produits
+    </h3>
+</div>
+
+<div class="container container_ord my-5">
+    <div class="row">
+         <!-- REDIRIGER VERS LA PAGE BLOUSSONS  -->
+        {% for article in articule %}
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100 all_ord" >
+                <a href="">
+                    <img src="{{ article.image_article.url }}" 
+                         class="card-img-top img_page1" 
+                         alt="{{ article.nom_article }}">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ article.nom_article }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

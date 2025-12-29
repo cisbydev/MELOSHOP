@@ -1,0 +1,15 @@
+#all_ord{ 
+    box-shadow: 0px 0px 10px 9px #e9ecef;
+}
+#all_ord:hover{
+    transition-duration: 1ms;
+    transform: scale(1.05);
+}
+.img_page1{
+    height: 250px;
+}
+
+#carousel-item img{
+    height: 200px;
+    object-fit: contain;
+}
